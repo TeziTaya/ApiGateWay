@@ -1,0 +1,16 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/Order/UserSelectList/{search}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 19679
+        }
+      ],
+      "UpstreamPathTemplate": "/orders/userlist/{search}",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ]
+}
