@@ -1,0 +1,16 @@
+version: '3.4'
+networks:
+  localdev:
+    name: localdev
+
+services:
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: ApiGateway\Dockerfile
+    restart: always
+    ports:
+      - 7005:80
+    networks:
+      - localdev
